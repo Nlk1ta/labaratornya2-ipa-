@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RubToGrivna">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Rub" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToGrivnaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RubToGrivnaResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToDollar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Rub" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToDollarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RubToDollarResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToEuro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Rub" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToEuroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RubToEuroResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToLira">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Rub" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToLiraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RubToLiraResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToBat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Rub" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RubToBatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RubToBatResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RubToGrivnaSoapIn">
+    <wsdl:part name="parameters" element="tns:RubToGrivna" />
+  </wsdl:message>
+  <wsdl:message name="RubToGrivnaSoapOut">
+    <wsdl:part name="parameters" element="tns:RubToGrivnaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RubToDollarSoapIn">
+    <wsdl:part name="parameters" element="tns:RubToDollar" />
+  </wsdl:message>
+  <wsdl:message name="RubToDollarSoapOut">
+    <wsdl:part name="parameters" element="tns:RubToDollarResponse" />
+  </wsdl:message>
+  <wsdl:message name="RubToEuroSoapIn">
+    <wsdl:part name="parameters" element="tns:RubToEuro" />
+  </wsdl:message>
+  <wsdl:message name="RubToEuroSoapOut">
+    <wsdl:part name="parameters" element="tns:RubToEuroResponse" />
+  </wsdl:message>
+  <wsdl:message name="RubToLiraSoapIn">
+    <wsdl:part name="parameters" element="tns:RubToLira" />
+  </wsdl:message>
+  <wsdl:message name="RubToLiraSoapOut">
+    <wsdl:part name="parameters" element="tns:RubToLiraResponse" />
+  </wsdl:message>
+  <wsdl:message name="RubToBatSoapIn">
+    <wsdl:part name="parameters" element="tns:RubToBat" />
+  </wsdl:message>
+  <wsdl:message name="RubToBatSoapOut">
+    <wsdl:part name="parameters" element="tns:RubToBatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="RubToGrivna">
+      <wsdl:input message="tns:RubToGrivnaSoapIn" />
+      <wsdl:output message="tns:RubToGrivnaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RubToDollar">
+      <wsdl:input message="tns:RubToDollarSoapIn" />
+      <wsdl:output message="tns:RubToDollarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RubToEuro">
+      <wsdl:input message="tns:RubToEuroSoapIn" />
+      <wsdl:output message="tns:RubToEuroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RubToLira">
+      <wsdl:input message="tns:RubToLiraSoapIn" />
+      <wsdl:output message="tns:RubToLiraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RubToBat">
+      <wsdl:input message="tns:RubToBatSoapIn" />
+      <wsdl:output message="tns:RubToBatSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RubToGrivna">
+      <soap:operation soapAction="http://tempuri.org/RubToGrivna" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToDollar">
+      <soap:operation soapAction="http://tempuri.org/RubToDollar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToEuro">
+      <soap:operation soapAction="http://tempuri.org/RubToEuro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToLira">
+      <soap:operation soapAction="http://tempuri.org/RubToLira" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToBat">
+      <soap:operation soapAction="http://tempuri.org/RubToBat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RubToGrivna">
+      <soap12:operation soapAction="http://tempuri.org/RubToGrivna" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToDollar">
+      <soap12:operation soapAction="http://tempuri.org/RubToDollar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToEuro">
+      <soap12:operation soapAction="http://tempuri.org/RubToEuro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToLira">
+      <soap12:operation soapAction="http://tempuri.org/RubToLira" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RubToBat">
+      <soap12:operation soapAction="http://tempuri.org/RubToBat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:62765/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:62765/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
